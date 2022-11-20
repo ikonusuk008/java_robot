@@ -22,7 +22,7 @@ public class ConpareHTML {
 		Document					ph2		= Jsoup.parse(new File(p1), "utf-8");
 		org.jsoup.select.Elements	e1		= ph1.getElementsByTag("td");
 		org.jsoup.select.Elements	e2		= ph2.getElementsByTag("td");
-		String						path_p1	= p1.replace("", "").replace("html", "xlsx");
+		String						path_p1	= p1.replace("", "").replace("html", "xlsx");	//
 		String						path_p2	= p2.replace("", "").replace("html", "xlsx");
 		p1_w_book(path_p1, e1, "subject");
 		p2_w_book(path_p1, path_p2, e2, "subject");
@@ -34,7 +34,7 @@ public class ConpareHTML {
 		if (f1.exists()) {
 			f1.delete();
 		}
-		Workbook	outputWorkbook	= WorkbookFactory.create(new File(path_p1));
+		Workbook	outputWorkbook	= WorkbookFactory.create(new File(path_p1));	//
 		Sheet		outputSheet		= outputWorkbook.getSheet("user_data");
 		int			i1				= 0;
 		for (Element element : e2) {
